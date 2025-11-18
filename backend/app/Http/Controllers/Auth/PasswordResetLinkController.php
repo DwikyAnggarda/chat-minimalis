@@ -28,6 +28,11 @@ class PasswordResetLinkController extends Controller
             $request->only('email')
         );
 
+        logger()->info('password_reset_debug', [
+            'dispatcher_class' => get_class(app(\Illuminate\Contracts\Notifications\Dispatcher::class)),
+            'status' => $status,
+        ]);
+
         if ($status != Password::RESET_LINK_SENT) {
             throw ValidationException::withMessages([
                 'email' => [__($status)],

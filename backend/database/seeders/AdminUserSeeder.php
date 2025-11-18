@@ -21,6 +21,7 @@ class AdminUserSeeder extends Seeder
             'role' => 'admin', // Ini yang penting!
             'created_at' => now(),
             'updated_at' => now(),
+            'email_verified_at' => now(),
         ]);
     }
 }
