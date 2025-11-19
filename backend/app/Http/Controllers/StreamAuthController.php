@@ -33,7 +33,7 @@ class StreamAuthController extends Controller
         $streamClient->upsertUser([
             'id' => $streamUserId,
             'name' => $user->name,
-            'role' => $this->mapRoleForStream($user->role), // Kirim role yang sudah terdaftar di Stream
+            'role' => $this->mapRoleForStream($user->role),
             'image' => 'https://api.dicebear.com/9.x/notionists-neutral/svg?seed=Leo', // Ganti dengan path avatar user jika ada
         ]);
 

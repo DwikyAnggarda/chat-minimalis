@@ -10,9 +10,6 @@ class StreamServiceProvider extends ServiceProvider
     /**
      * Register services.
      */
-    /**
-     * Register services.
-     */
     public function register(): void
     {
         // Bind Stream Client ke container Laravel (sehingga bisa diakses melalui app('stream'))
