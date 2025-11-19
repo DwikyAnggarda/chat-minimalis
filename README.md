@@ -1,6 +1,6 @@
-# 💬 Chat Minimalis (Cloning Halodoc Web Minimalis)
+# 💬 Chat Minimalis
 
-Aplikasi web minimalis untuk konsultasi dan *chat* 1:1 antara *Customer* dan *Admin/Dokter*, yang dibangun dengan *stack* modern dan layanan *real-time* pihak ketiga.
+Aplikasi web minimalis untuk konsultasi dan *chat* 1:1 antara *Customer* dan *Admin*, yang dibangun dengan *stack* modern dan layanan *real-time* pihak ketiga.
 
 ## 🚀 Stack Teknologi
 
@@ -8,7 +8,7 @@ Proyek ini dibangun menggunakan kombinasi teknologi *headless* dan *service* *re
 
 | Kategori | Teknologi | Tujuan |
 | :--- | :--- | :--- |
-| **Frontend (FE)** | **React** (via Lovable.dev) | Antarmuka pengguna yang cepat, *responsive*, dan *single-page application* (SPA). |
+| **Frontend (FE)** | **React** | Antarmuka pengguna yang cepat, *responsive*, dan *single-page application* (SPA). |
 | **Backend (BE)** | **Laravel 11+** (PHP) | REST API untuk Otentikasi, Logika Bisnis, dan *Server-Side Token Generation* untuk Chat. |
 | **Database (DB)** | **PostgreSQL** | Database relasional utama untuk data *user*, *role*, dan data aplikasi lainnya. |
 | **Real-time Chat** | **GetStream.io** | Layanan pihak ketiga untuk mesin *chat* *real-time*, penyimpanan pesan (*persistence*), dan manajemen *channel*. |
