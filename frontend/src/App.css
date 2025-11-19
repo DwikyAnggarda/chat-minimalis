@@ -1,9 +1,16 @@
-/* Layout Dasar */
-body {
+/* Reset Dasar */
+body,
+html,
+#root {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding: 0;
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+  background-color: #f0f2f5;
+  /* Latar belakang aplikasi */
 }
 
+/* Layout Utama */
 .app-layout {
   display: flex;
   height: 100vh;
@@ -11,31 +18,35 @@ body {
   overflow: hidden;
 }
 
-/* Sidebar */
+/* Sidebar Kiri */
 .sidebar {
-  width: 300px;
-  background: #f7f7f7;
-  border-right: 1px solid #ddd;
+  width: 320px;
+  background: #ffffff;
+  /* Putih bersih */
+  border-right: 1px solid #e0e0e0;
   display: flex;
   flex-direction: column;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.03);
 }
 
 .sidebar-header {
-  padding: 20px;
-  background: #fff;
-  border-bottom: 1px solid #eee;
+  padding: 20px 15px;
+  background: #f8f8f8;
+  border-bottom: 1px solid #e0e0e0;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .badge {
-  background: #333;
+  background: #007bff;
+  /* Warna biru profesional */
   color: #fff;
   padding: 2px 8px;
-  border-radius: 10px;
+  border-radius: 12px;
   font-size: 10px;
   text-transform: uppercase;
+  font-weight: 600;
 }
 
 .sidebar-content {
@@ -43,35 +54,23 @@ body {
   overflow-y: auto;
 }
 
-/* Inbox Stream Component Override */
-.inbox-section {
-  height: 40%;
-  border-bottom: 1px solid #ddd;
-  overflow-y: auto;
-}
-
-.str-chat__channel-list-lab {
-  display: none;
-}
-
-/* Sembunyikan header bawaan stream */
-
-/* Directory Section */
+/* Judul Section */
+.inbox-section,
 .directory-section {
-  padding: 0 15px;
-  height: 60%;
-  overflow-y: auto;
+  padding-bottom: 5px;
 }
 
 .section-title {
   padding: 10px 15px;
   margin: 0;
   font-size: 12px;
-  color: #888;
-  background: #f7f7f7;
+  color: #777;
+  background: #f4f4f4;
+  font-weight: 600;
+  border-top: 1px solid #eee;
 }
 
-/* User List Items */
+/* Item Daftar Pengguna */
 .user-list-ul {
   list-style: none;
   padding: 0;
@@ -81,42 +80,67 @@ body {
 .user-item {
   display: flex;
   align-items: center;
-  padding: 10px 0;
+  padding: 12px 15px;
   cursor: pointer;
-  border-bottom: 1px solid #eee;
-  transition: 0.2s;
+  border-bottom: 1px solid #f9f9f9;
+  transition: background-color 0.2s;
 }
 
 .user-item:hover {
-  background: #eee;
-  padding-left: 5px;
+  background: #eef;
+  /* Warna hover lembut */
 }
 
 .avatar-circle {
-  width: 32px;
-  height: 32px;
-  background: #006cff;
+  width: 36px;
+  height: 36px;
+  background: #007bff;
   color: white;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  margin-right: 10px;
-  font-size: 14px;
+  margin-right: 12px;
+  font-size: 16px;
 }
 
 .user-info .name {
   font-size: 14px;
   font-weight: 600;
+  color: #333;
 }
 
 .user-info .status {
   font-size: 11px;
-  color: green;
+  color: #28a745;
+  /* Hijau untuk online */
 }
 
-/* Chat Area */
+/* Tombol Logout */
+.sidebar-footer {
+  padding: 15px;
+  border-top: 1px solid #eee;
+}
+
+.btn-logout {
+  width: 100%;
+  padding: 10px;
+  background: #dc3545;
+  /* Merah untuk Logout/Danger */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.btn-logout:hover {
+  background: #c82333;
+}
+
+/* Area Chat */
 .chat-area {
   flex: 1;
   background: #fff;
@@ -130,51 +154,64 @@ body {
   justify-content: center;
   height: 100%;
   color: #aaa;
-  background: #f0f0f0;
+  background: #f0f2f5;
 }
 
-/* Login */
+/* Login Screen */
 .login-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: #fafafa;
+  background: #f0f2f5;
 }
 
 .login-box {
   background: white;
   padding: 40px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 320px;
+  max-width: 360px;
 }
 
 .input-field {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
   box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+
+.input-field:focus {
+  border-color: #007bff;
+  outline: none;
 }
 
 .btn-primary {
   width: 100%;
-  padding: 10px;
-  background: #006cff;
+  padding: 12px;
+  background: #007bff;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
   font-weight: bold;
+  transition: background-color 0.2s;
 }
 
-.btn-logout {
-  margin: 10px;
-  padding: 10px;
-  border: 1px solid #ddd;
-  background: transparent;
-  cursor: pointer;
+.btn-primary:hover {
+  background: #0056b3;
+}
+
+/* Loading Screen */
+.full-screen-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #ffffff;
 }

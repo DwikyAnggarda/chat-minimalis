@@ -1,20 +1,35 @@
 <?php
 
 return [
-    // Pastikan path ini mencakup sanctum dan rute login
+
+    /*
+    |--------------------------------------------------------------------------
+    | Cross-Origin Resource Sharing (CORS) Configuration
+    |--------------------------------------------------------------------------
+    |
+    | Here you may configure your settings for cross-origin resource sharing
+    | or "CORS". This determines what cross-origin operations may execute
+    | in web browsers. You are free to adjust these settings as needed.
+    |
+    | To learn more: https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
+    |
+    */
+
     'paths' => ['api/*', 'sanctum/csrf-cookie', 'login', 'logout', 'register'],
+    // 'allowed_origins' => ['http://127.0.0.1:5173', 'http://localhost:5173', 'http://127.0.0.1:8000', 'https://chatmin-backend.loca.lt', 'https://chatmin-frontend.loca.lt', 'https://17e3bc76a114.ngrok-free.app'],
 
     'allowed_methods' => ['*'],
 
-    // PENTING: Harus SAMA PERSIS dengan URL browser React Anda
-    // Jangan pakai '*' jika pakai credentials
-    'allowed_origins' => ['http://127.0.0.1:5173', 'http://localhost:5173', 'http://127.0.0.1:8000'],
+    'allowed_origins' => ['*'],
 
     'allowed_origins_patterns' => [],
+
     'allowed_headers' => ['*'],
+
     'exposed_headers' => [],
+
     'max_age' => 0,
 
-    // INI KUNCINYA: Wajib true agar cookie CSRF bisa lewat
     'supports_credentials' => true,
+
 ];
