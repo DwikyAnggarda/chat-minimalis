@@ -40,7 +40,7 @@ Pastikan Anda telah menginstal yang berikut:
 
 ```bash
 # Clone repository
-git clone https://www.andarepository.com/ chat-minimalis
+git clone https://github.com/DwikyAnggarda/chat-minimalis.git
 cd chat-minimalis
 
 # Instal dependensi PHP
@@ -81,7 +81,7 @@ php artisan migrate
 php artisan db:seed
 ```
 
-> Akun Admin Default: `email: admin@example.com` | `password: password_admin_kuat`
+> Akun Admin Default: `email: admin@example.com` | `password: 12345678`
 
 #### Jalankan Server Laravel
 
@@ -92,12 +92,6 @@ php artisan serve
 Server Laravel akan berjalan di `http://127.0.0.1:8000`.
 
 ### 3\. Setup Frontend (React)
-
-*(Asumsi Anda menggunakan `lovable.dev` untuk *generate* proyek React di folder terpisah, misalnya `fe-minimalis`)*
-
-```bash
-# Pindah ke direktori frontend (ganti nama folder jika berbeda)
-cd ../fe-minimalis
 
 # Instal dependensi Node.js
 npm install 
