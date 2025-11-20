@@ -119,7 +119,3 @@ Untuk mengakses API GetStream dari localhost, Anda perlu menambahkan domain ke a
 - `STREAM_API_SECRET` hanya digunakan di backend (server-side)
 - Frontend hanya menerima token yang di-generate oleh Laravel
 - Jangan expose API Secret ke client-side
-
-## 📝 Lisensi
-
-[Sesuaikan dengan lisensi project Anda]
